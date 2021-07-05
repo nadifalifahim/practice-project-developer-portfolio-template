@@ -9,14 +9,17 @@ body {
 
 h1 {
     font-size: 2.7em;
+    cursor: default;
 }
 
 h2 {
     font-size: 2.6em;
+    cursor: default;
 }
 
 p {
     color: rgb(94, 94, 94);
+    cursor: default;
 }
 
 #first-section {
@@ -42,16 +45,34 @@ p {
     width: 80%;
     margin: 0 auto;
     display: block;
+    transition: 0.5s ease-in-out;
+}
+
+#first-section img:hover {
+    transform: translate(5px);
+}
+
+#second-section img:hover {
+    transform: translate(-5px);
 }
 
 .button {
     display: inline-block;
     text-decoration: none;
     color: white;
+    /* background-color: rgb(253, 90, 31); */
     background-image: linear-gradient(35deg, rgb(250, 164, 107), rgb(252, 84, 72));
     padding: 8px 40px;
     border-radius: 5px;
     font-weight: 900;
+    transition: 0.5s ease all;
+}
+
+.button:hover {
+    /* background-image: linear-gradient(35deg, rgb(255, 143, 68), rgb(255, 40, 24)); */
+    /* background-color: rgb(255, 0, 0); */
+    /* padding: 12px 40px; */
+    transform: scale(1.03);
 }
 
 #second-section {
@@ -90,18 +111,29 @@ p {
     padding: 50px;
     box-shadow: 5px 5px 50px 10px rgb(212, 212, 212);
     border-radius: 5px;
+    background-color: white;
 }
 
 #card-1 {
     border-left: 10px solid;
     border-image: linear-gradient(60deg, rgb(13, 207, 255), rgb(11, 142, 250));
     border-image-slice: 1;
+    transition: 0.5s ease;
+}
+
+#card-1:hover {
+    transform: scale(1.01);
 }
 
 #card-2 {
     border-left: 10px solid;
     border-image: linear-gradient(60deg, rgb(250, 164, 107), rgb(252, 84, 72));
     border-image-slice: 1;
+    transition: 0.5s ease;
+}
+
+#card-2:hover {
+    transform: scale(1.01);
 }
 
 .experience-info {
@@ -114,7 +146,17 @@ footer {
     padding: 20px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1300px) {
+    #third-section-container {
+        padding: 50px 30px;
+    }
+    .experience-card {
+        width: 50%;
+        margin: 0 20px;
+    }
+}
+
+@media(max-width: 960px) {
     #first-section {
         text-align: center;
         padding: 50px 60px;
@@ -165,7 +207,6 @@ footer {
         margin: 20px auto;
         padding: 50px;
         box-shadow: 5px 5px 50px 10px rgb(212, 212, 212);
-        background-color: white;
         text-align: center;
         border-radius: 10px;
     }
@@ -179,5 +220,20 @@ footer {
     }
     footer {
         padding: 50px;
+    }
+}
+
+@media(max-width: 550px) {
+    .bubbles {
+        width: 40%;
+    }
+}
+
+@media(max-width: 440px) {
+    h1 {
+        font-size: 2em;
+    }
+    .bubbles {
+        width: 60%;
     }
 }
