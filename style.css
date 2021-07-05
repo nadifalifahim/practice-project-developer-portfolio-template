@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.6em;
 }
 
 p {
@@ -34,17 +34,14 @@ p {
     margin: auto 0;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-}
-
 .orange-color {
     color: orangered;
 }
 
 .bubbles {
     width: 80%;
+    margin: 0 auto;
+    display: block;
 }
 
 .button {
@@ -79,7 +76,7 @@ p {
 }
 
 #third-section>h2 {
-    font-size: 2.9em;
+    font-size: 2.6em;
     text-align: center;
 }
 
@@ -97,13 +94,13 @@ p {
 
 #card-1 {
     border-left: 10px solid;
-    border-image: linear-gradient(rgb(13, 207, 255), rgb(11, 142, 250));
+    border-image: linear-gradient(60deg, rgb(13, 207, 255), rgb(11, 142, 250));
     border-image-slice: 1;
 }
 
 #card-2 {
     border-left: 10px solid;
-    border-image: linear-gradient(rgb(250, 164, 107), rgb(252, 84, 72));
+    border-image: linear-gradient(60deg, rgb(250, 164, 107), rgb(252, 84, 72));
     border-image-slice: 1;
 }
 
@@ -115,4 +112,72 @@ p {
 footer {
     text-align: center;
     padding: 20px;
+}
+
+@media(max-width: 800px) {
+    #first-section {
+        text-align: center;
+        padding: 50px 60px;
+        flex-direction: column-reverse;
+    }
+    #first-section h1 {
+        margin-top: 10px;
+    }
+    .half-width {
+        width: 100%;
+    }
+    .bubbles {
+        width: 20%;
+        margin: 0 auto;
+        display: block;
+    }
+    #second-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 60px;
+        background-position-y: 0%;
+    }
+    #second-section h2 {
+        margin-top: 20px;
+    }
+    #third-section {
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+    #third-section-container {
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    #third-section>h2 {
+        font-size: 2.2em;
+    }
+    #third-section-container h2 {
+        font-size: 1.8em;
+    }
+    .experience-card {
+        width: 60%;
+        margin: 20px auto;
+        padding: 50px;
+        box-shadow: 5px 5px 50px 10px rgb(212, 212, 212);
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;
+    }
+    #card-1 {
+        border-left: none;
+        border-bottom: 8px solid;
+    }
+    #card-2 {
+        border-left: none;
+        border-bottom: 8px solid;
+    }
+    footer {
+        padding: 50px;
+    }
 }
