@@ -99,10 +99,12 @@ p {
 #third-section>h2 {
     font-size: 2.6em;
     text-align: center;
+    cursor: default;
 }
 
 #third-section-container h2 {
     font-size: 2.1em;
+    cursor: default;
 }
 
 .experience-card {
